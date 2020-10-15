@@ -684,6 +684,29 @@ func (config MediaGroupConfig) method() string {
 	return "sendMediaGroup"
 }
 
+// EditMessageMediaConfig contains information about editing a message's media.
+type EditMessageMediaConfig struct {
+	BaseEdit
+
+	Media interface{}
+}
+
+func (EditMessageMediaConfig) method() string {
+	return "editMessageMedia"
+}
+
+func (config EditMessageMediaConfig) values() (url.Values, error) {
+	v, err := config.BaseEdit.values()
+
+	data, err := json.Marshal(config.Media)
+	if err != nil {
+		return v, err
+	}
+	v.Add("media", string(data))
+
+	return v, err
+}
+
 // LocationConfig contains information about a SendLocation request.
 type LocationConfig struct {
 	BaseChat

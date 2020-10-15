@@ -1,2 +1,4 @@
+github.com/gohouse/t v0.0.0-20200803075407-c3e80980be23 h1:+qW+6zw1cCe4VirCAiwVOKo3SJGaDlgygx3TE/OZRvM=
+github.com/gohouse/t v0.0.0-20200803075407-c3e80980be23/go.mod h1:kUDPW94gfrQKjvhhqW1l0rGCJ/1BUnhD4AIzdEmnI6M=
 github.com/technoweenie/multipartstreamer v1.0.1 h1:XRztA5MXiR1TIRHxH2uNxXxaIkKQDeX7m2XsSOlQEnM=
 github.com/technoweenie/multipartstreamer v1.0.1/go.mod h1:jNVxdtShOxzAsukZwTSw6MDx5eUJoiEBsSvzDU9uzog=

@@ -892,3 +892,27 @@ func NewSetChatPhotoShare(chatID int64, fileID string) SetChatPhotoConfig {
 		},
 	}
 }
+
+func NewEditMessageMedia(chatId int64, messageId int, media interface{}) EditMessageMediaConfig {
+	return EditMessageMediaConfig{
+		BaseEdit: BaseEdit{
+			ChatID: chatId,
+			MessageID: messageId,
+			//InlineMessageID: ctx.Update.CallbackQuery.InlineMessageID,
+			//ReplyMarkup: &replymarkup,
+		},
+		Media: media,
+	}
+}
+
+func NewEditMessageMediaWithReplyMarkup(chatId int64, messageId int, media interface{}, replymarkup *InlineKeyboardMarkup) EditMessageMediaConfig {
+	return EditMessageMediaConfig{
+		BaseEdit: BaseEdit{
+			ChatID: chatId,
+			MessageID: messageId,
+			//InlineMessageID: ctx.Update.CallbackQuery.InlineMessageID,
+			ReplyMarkup: replymarkup,
+		},
+		Media: media,
+	}
+}
